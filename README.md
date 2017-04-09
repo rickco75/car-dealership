@@ -1,4 +1,9 @@
 # car-dealership
+
+Camp : JavaScript + Full Stack .NET
+Section : Unit 3 - AngularJS
+Lesson : AngularJS Practice Project - AngularJS Car Dealership
+---------------------------------------------------------------
 AngularJS Car Dealership Project
 Today, you will build a simple car dealership website using AngularJS. This website will support the following features:
 
