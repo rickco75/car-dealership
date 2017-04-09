@@ -1,18 +1,7 @@
-<label>Select a car make: </label>
-
-<label>Search</label> <input ng-model="search" type="text" />
-
-<!--<select ng-model="controller.selectedMake" ng-init="controller.selectedMake='0'">
-    <option value="0" selected>
-        --All--
-    </option>
-    <option ng-repeat="make in controller.makes" value="{{make.id}}">
-        {{make.name}}
-    </option>
-</select>-->
+<label>Search Make </label> <input ng-model="search" type="text" />
 
 <label>
-    Filter Make 
+    &nbsp; Filter Make 
     <select ng-model="makeSelection" ng-options="make as make.name for make in controller.makes track by make.id">
         <option></option>   
     </select>
@@ -31,10 +20,23 @@
             <img ng-src="{{car.imageUrl}}" ng-click="controller.showModal(car.id)" />
         </td>
         <td>
-            <img style="cursor:pointer" width="50" height="50" src="../../images/readmorebutton.png" ng-click="controller.showModal(car.id)" />
+            <img style="cursor:pointer" width="50" height="60" src="../../images/readmorebutton.png" ng-click="controller.showModal(car.id)" />
         </td>
     </tr>
 </table>
+
+
+
+<!--<select ng-model="controller.selectedMake" ng-init="controller.selectedMake='0'">
+    <option value="0" selected>
+        --All--
+    </option>
+    <option ng-repeat="make in controller.makes" value="{{make.id}}">
+        {{make.name}}
+    </option>
+</select>-->
+
+
 <!--<ul style="border:none">
     <li ng-repeat="car in controller.getCars()" style="border:none;list-style:none">
         <table class="hoverTable" style="border:11px inset outset">

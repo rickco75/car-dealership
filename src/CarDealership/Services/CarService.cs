@@ -13,7 +13,7 @@ namespace CarDealership.Services
             new CarMake {Id=1, Name="BMW" },
             new CarMake {Id=2, Name="Tesla" },
             new CarMake {Id=3, Name="MiniCooper" },
-            new CarMake {Id=4, Name="Porche" }
+            new CarMake {Id=4, Name="Porsche" }
         };
 
         private static List<Car> _cars = new List<Car>
@@ -93,7 +93,7 @@ namespace CarDealership.Services
             new Car
             {
                 Id = 6,
-                ShortDescription = "Porche Cayman GT4                            ",
+                ShortDescription = "Porsche Cayman GT4                            ",
                 FullDescription = "Due to high demand, a GT4 RS is on its way—with more power and a 4.0L flat-six engine.",
                 CarMakeId = 4,
                 Price = 200000m,
