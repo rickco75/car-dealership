@@ -1,0 +1,90 @@
+<label>Select a car make: </label>
+
+<label>Search</label> <input ng-model="search" type="text" />
+
+<!--<select ng-model="controller.selectedMake" ng-init="controller.selectedMake='0'">
+    <option value="0" selected>
+        --All--
+    </option>
+    <option ng-repeat="make in controller.makes" value="{{make.id}}">
+        {{make.name}}
+    </option>
+</select>-->
+
+<label>
+    Filter Make 
+    <select ng-model="makeSelection" ng-options="make as make.name for make in controller.makes track by make.id">
+        <option></option>   
+    </select>
+</label>
+<hr />
+<table cellspacing="3" cellpadding="3" ng-class="{highlight:doHilight }">
+    <tr ng-repeat="car in controller.cars|filter: {carMakeId:makeSelection.id,shortDescription:search}"
+        ng-class="{highlight:doHilight }"
+        ng-mouseenter="highlight=true"
+        ng-mouseleave="highlight=false">
+        <td>
+            <p style="font-weight:bold">{{car.shortDescription}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <!--<p>{{car.fullDescription}}</p>-->
+        </td>
+        <td>
+            <img ng-src="{{car.imageUrl}}" ng-click="controller.showModal(car.id)" />
+        </td>
+        <td>
+            <img style="cursor:pointer" width="50" height="50" src="../../images/readmorebutton.png" ng-click="controller.showModal(car.id)" />
+        </td>
+    </tr>
+</table>
+<!--<ul style="border:none">
+    <li ng-repeat="car in controller.getCars()" style="border:none;list-style:none">
+        <table class="hoverTable" style="border:11px inset outset">
+            <tr>
+                <td>
+                    <strong ng-repeat="make in controller.makes|filter:{id: car.carMakeId}">{{make.name}}</strong>
+                </td>
+            </tr>
+            <tr>
+                <td>{{car.shortDescription}}</td>
+            </tr>
+            <tr>
+                <td>{{car.price|currency}}</td>
+            </tr>
+        <tr>
+            <td>
+                <img ng-src="{{car.imageUrl}}"/>
+            </td>
+        </tr>
+            <tr>
+                <td><a href="#" ng-click="controller.showModal(car.id)">View details</a></td>
+            </tr>
+        </table><br />
+    </li>
+</ul>-->
+<!--<div>
+    <label>Search</label> <input ng-model="search" type="text" />
+</div>
+
+<div>
+    <label>
+        Filter Make <select ng-model="makeSelection" ng-options="make.name for make in controller.makes track by make.id">
+            <option></option>
+        </select>
+    </label>
+</div>
+
+<a href="#" ng-click="controller.showModal(car.id)">See full details</a>
+<div uib-carousel interval="5000" active="active" no-wrap="false">
+    <div uib-slide ng-repeat="car in controller.cars track by car.id" index="$index" ng-click="controller.showModal(car.id)">
+        <img src="{{car.imageURL}}" />
+        
+        <div class="carousel-caption">
+            <h4>{{car.shortDescription}}</h4>
+            <p>{{car.fullDescription}}</p>
+        </div>
+    </div>
+</div>-->
+
+
+
+
+<!--ng-click="controller.showModal(car)"-->
